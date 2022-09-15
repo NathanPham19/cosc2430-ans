@@ -1,15 +1,14 @@
 <?php
-  session_start();
+  $items = [
+    ['edu','Bachelor of Information Technology','RMIT',2020,2023],
+    ['edu','Doctor of Philosophy in CS','Harvard',2028,2033],
+    ['edu','Master of Cyber Security','RMIT',2024,2026],
+    ['exp','Software Engineer','Google',2022,2024,
+    ['exp','Principal Software Engineer','Boeing',2030,2035],
+    ['exp','Senior Software Engineer','Amazon',2025,2028]
+  ];
 
-  if (isset($_POST['act'])) {
-    $product = [
-      'name' => $_POST['product_name'],
-      'price' => $_POST['price'],
-      'sizes' => $_POST['sizes'],
-      'created_time' => date('Y-m-d h:i:s')
-    ];
-    $_SESSION['products'][] = $product;
-  }
+
 ?>
 
 <form method="post" action="add_product.php">
